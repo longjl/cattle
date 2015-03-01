@@ -432,6 +432,9 @@ public class UserPhotosFragment extends AbstractPhotosFragment implements OnItem
         }
     }
 
+    /**
+     * 照相
+     */
     private void takePhoto() {
         if (null == mPhotoFile) {
             Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

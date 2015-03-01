@@ -72,6 +72,7 @@
         <item name="android:numColumns">auto_fit</item>
         <item name="android:stretchMode">columnWidth</item>
         <item name="android:verticalSpacing">@dimen/gridview_spacing</item>
+       <item name="android:layout_marginTop">30dp</item>
     </style>
 
     <style name="FragmentTitle">

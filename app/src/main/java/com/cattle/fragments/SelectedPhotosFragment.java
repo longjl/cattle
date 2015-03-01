@@ -15,6 +15,7 @@
  */
 package com.cattle.fragments;
 
+import com.cattle.views.MyGridView;
 import com.example.android.swipedismiss.SwipeDismissListViewTouchListener;
 import com.example.android.swipedismiss.SwipeDismissListViewTouchListener.OnDismissCallback;
 
@@ -46,7 +47,7 @@ import com.cattle.util.Utils;
 public class SelectedPhotosFragment extends AbstractPhotosFragment
         implements OnItemClickListener, OnDismissCallback {
 
-    private GridView mGridView;
+    private MyGridView mGridView;
     private SelectedPhotosBaseAdapter mAdapter;
     private PhotoUploadController mPhotoSelectionController;
 
@@ -66,7 +67,7 @@ public class SelectedPhotosFragment extends AbstractPhotosFragment
             Bundle savedInstanceState) {
         ViewGroup view = (ViewGroup) inflater
                 .inflate(R.layout.fragment_selected_photos, container, false);
-        mGridView = (GridView) view.findViewById(R.id.gv_photos);
+        mGridView = (MyGridView) view.findViewById(R.id.gv_photos);
         mGridView.setOnItemClickListener(this);
 
         final boolean swipeToDismiss = getResources().getBoolean(R.bool.swipe_selected);

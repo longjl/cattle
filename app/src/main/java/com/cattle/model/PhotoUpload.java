@@ -783,7 +783,7 @@ public class PhotoUpload {
     }
 
     private Bitmap getUploadImageNative(final Context context, final UploadQuality quality) {
-        Utils.checkPhotoProcessingThread();
+       // Utils.checkPhotoProcessingThread();
         try {
             String path = Utils
                     .getPathFromContentUri(context.getContentResolver(), getOriginalPhotoUri());

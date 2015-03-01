@@ -18,15 +18,32 @@
     style="@style/SelectedFragmentStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@android:color/white">
 
     <include layout="@layout/layout_empty_selected" />
 
-    <GridView
-        android:id="@+id/gv_photos"
-        style="@style/PhotosGridView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnWidth="@dimen/gridview_item_dimension_user" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="分享新鲜事儿..."
+                android:textColor="@android:color/black" />
+
+            <com.cattle.views.MyGridView
+                android:id="@+id/gv_photos"
+                style="@style/PhotosGridView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnWidth="@dimen/gridview_item_dimension_user" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

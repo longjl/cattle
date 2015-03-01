@@ -19,6 +19,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore.Images;
 import android.support.v4.app.LoaderManager;
@@ -26,6 +28,8 @@ import android.support.v4.content.Loader;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
@@ -34,12 +38,17 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.PopupWindow;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.Toast;
+
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+
 import de.greenrobot.event.EventBus;
+
 import com.cattle.adapters.SelectedPhotosViewPagerAdapter;
 import com.cattle.adapters.UserPhotosViewPagerAdapter;
 import com.cattle.base.PhotupFragmentActivity;
@@ -312,6 +321,7 @@ public class PhotoViewerActivity extends PhotupFragmentActivity implements OnSin
                 showTapToTagPrompt();
             }
         });
+
     }
 
     @Override
@@ -360,7 +370,6 @@ public class PhotoViewerActivity extends PhotupFragmentActivity implements OnSin
     }
 
 
-
     private boolean hideFiltersView() {
         if (null != mFilterGroup && mFilterGroup.isShowing()) {
             mFilterGroup.hide();
@@ -369,7 +378,6 @@ public class PhotoViewerActivity extends PhotupFragmentActivity implements OnSin
         }
         return false;
     }
-
 
 
     private void showFiltersView() {
@@ -389,7 +397,7 @@ public class PhotoViewerActivity extends PhotupFragmentActivity implements OnSin
     }
 
     private void showTapToTagPrompt() {
-       // Toast.makeText(this, R.string.tag_friend_prompt, Toast.LENGTH_SHORT).show();
+        // Toast.makeText(this, R.string.tag_friend_prompt, Toast.LENGTH_SHORT).show();
     }
 
     private void updateFiltersView() {

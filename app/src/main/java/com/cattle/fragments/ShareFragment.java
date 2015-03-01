@@ -103,7 +103,7 @@ public class ShareFragment extends PhotupDialogFragment implements
      */
     private void share() {
         if (photoUploads != null && photoUploads.size() > 0) {
-            ShareUtils.share(getActivity(), photoUploads.get(0), platform, ed_share_content.getText().toString());
+            new ShareUtils().share(getActivity(), photoUploads, platform, ed_share_content.getText().toString());
         }
     }
 

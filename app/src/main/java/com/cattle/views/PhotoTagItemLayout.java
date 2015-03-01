@@ -176,7 +176,7 @@ public class PhotoTagItemLayout extends FrameLayout
         post(new Runnable() {
             public void run() {
                //longjianlin 屏蔽点击图片
-               // onPhotoTagsChangedImp(tag, added);
+               //onPhotoTagsChangedImp(tag, added);
             }
         });
     }

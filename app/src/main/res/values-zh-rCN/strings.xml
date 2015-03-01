@@ -17,10 +17,11 @@
 <resources>
     <string name="tab_photos">照片集</string>
     <string name="tab_selected_photos">已选 (%1$d)</string>
-    <string name="photo_effects">Effects</string>
+    <string name="photo_effects">效果</string>
     <string name="photo_caption">Caption</string>
-    <string name="photo_rotate">Rotate</string>
-    <string name="photo_crop">Crop</string>
+    <string name="photo_rotate">旋转</string>
+    <string name="photo_watermark">水印</string>
+    <string name="photo_crop">裁剪</string>
     <string name="photo_reset">Reset</string>
     <string name="tag_no_name">Who\'s this?</string>
     <string name="tab_uploads">授权</string>
